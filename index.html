@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lakshit panthri  | Frontend Developer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0a0a2e, #1a0033);
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .container {
+      width: 95%;
+      max-width: 1200px;
+      background: rgba(15, 15, 45, 0.95);
+      border-radius: 20px;
+      box-shadow: 0 0 40px rgba(138, 43, 226, 0.4);
+      overflow: hidden;
+      border: 1px solid rgba(138, 43, 226, 0.3);
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      background: linear-gradient(90deg, #8a2be2, #ff00ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #8a2be2;
+    }
+
+    .right-nav {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .theme-toggle {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    .download-btn {
+      background: linear-gradient(90deg, #8a2be2, #ff00ff);
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 50px;
+      font-weight: bold;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: transform 0.3s;
+    }
+
+    .download-btn:hover {
+      transform: translateY(-3px);
+    }
+
+    .main-content {
+      display: flex;
+      padding: 60px 40px;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .profile-section {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+
+    .profile-image {
+      position: relative;
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 6px solid #8a2be2;
+      box-shadow: 0 0 60px rgba(138, 43, 226, 0.6);
+    }
+
+    .profile-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .glow-circle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 360px;
+      height: 360px;
+      border: 2px solid rgba(138, 43, 226, 0.4);
+      border-radius: 50%;
+      z-index: -1;
+    }
+
+    .text-section {
+      flex: 1;
+    }
+
+    .greeting {
+      font-size: 18px;
+      color: #bb86fc;
+      margin-bottom: 10px;
+    }
+
+    .name {
+      font-size: 42px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .title {
+      font-size: 28px;
+      color: #8a2be2;
+      margin-bottom: 20px;
+    }
+
+    .description {
+      color: #ddd;
+      line-height: 1.7;
+      margin-bottom: 30px;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+
+    .social-links a {
+      color: white;
+      font-size: 22px;
+      transition: color 0.3s;
+    }
+
+    .social-links a:hover {
+      color: #8a2be2;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 15px;
+    }
+
+    .btn {
+      padding: 12px 28px;
+      border-radius: 50px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .btn-hire {
+      background: #8a2be2;
+      color: white;
+      border: none;
+    }
+
+    .btn-contact {
+      background: transparent;
+      color: white;
+      border: 2px solid #8a2be2;
+    }
+
+    .stats {
+      display: flex;
+      justify-content: space-between;
+      padding: 30px 40px;
+      background: rgba(0, 0, 0, 0.3);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .stat-item {
+      text-align: center;
+    }
+
+    .stat-number {
+      font-size: 32px;
+      font-weight: bold;
+      color: #8a2be2;
+    }
+
+    .stat-label {
+      font-size: 14px;
+      color: #aaa;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logo">Portfolio</div>
+      <div class="nav-links">
+        <!-- <a href="#" class="active">Home</a>
+        <a href="#">About</a>
+        <a href="#">Skills</a>
+        <a href="#">Services</a>
+        <a href="#">Portfolio</a>
+        <a href="#">Contact</a> -->
+      </div>
+      <div class="right-nav">
+        <button class="theme-toggle"><i class="fas fa-moon"></i></button>
+        <button class="download-btn">
+          <i class="fas fa-download"></i> Download CV
+        </button>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Profile Image -->
+      <div class="profile-section">
+        <div class="profile-image">
+          <img src="./ddkp.jpg" alt="Chandni Chauhan">
+          <div class="glow-circle"></div>
+        </div>
+      </div>
+
+      <!-- Text Content -->
+      <div class="text-section">
+        <p class="greeting">Hello, I'm</p>
+        <h1 class="name">lakshit panthri</h1>
+        <h2 class="title"><span style="color:#8a2be2;">Frontend Developer  & Social Media Creator</span></h2>
+        
+        <p class="description">
+            Passionate Frontend Developer and a social media creator with 236K views on recent post with 5K to 6K on average post and i  keen eye for creating elegant, 
+            responsive, and user-centric web interfaces. I specialize in turning 
+            design concepts into pixel-perfect, high-performance websites using 
+            modern technologies like React, Tailwind CSS, and JavaScript.
+        </p>
+
+        <!-- Social Icons -->
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/lakshitpanthri/"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/lakshitpanthri/"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.instagram.com/lakshitpanthri/"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+
+        <!-- Buttons -->
+        <div class="buttons">
+          <button class="btn btn-hire" onClick="window.location.href='rrb.html'">My project<s/button>
+          <button class="btn btn-contact">Contact Me</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats Bar -->
+    <!-- <div class="stats">
+      <div class="stat-item">
+        <div class="stat-number">10+</div>
+        <div class="stat-label">Fresher</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">3+</div>
+        <div class="stat-label">Projects completed and uploaded on github</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">5+</div>
+        <div class="stat-label">Technologies mastered</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">100+</div>
+        <div class="stat-label">Satisfied Client</div>
+      </div>
+    </div> -->
+  </div>
+
+</body>
+</html>
