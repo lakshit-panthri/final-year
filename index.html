@@ -22,6 +22,99 @@
       justify-content: center;
       overflow: hidden;
     }
+    /* ================== RESPONSIVE DESIGN ================== */
+@media (max-width: 1024px) {
+  .main-content {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+    gap: 40px;
+  }
+
+  .profile-image {
+    width: 260px;
+    height: 260px;
+  }
+
+  .glow-circle {
+    width: 300px;
+    height: 300px;
+  }
+
+  .name {
+    font-size: 34px;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  .buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+/* ================== MOBILE ================== */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .logo {
+    font-size: 22px;
+  }
+
+  .main-content {
+    padding: 30px 15px;
+  }
+
+  .profile-image {
+    width: 200px;
+    height: 200px;
+  }
+
+  .glow-circle {
+    width: 230px;
+    height: 230px;
+  }
+
+  .name {
+    font-size: 26px;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+
+  .greeting {
+    font-size: 14px;
+  }
+
+  .description {
+    font-size: 13px;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .download-btn {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+}
 
     .container {
       width: 95%;
@@ -288,7 +381,7 @@
 
         <!-- Buttons -->
         <div class="buttons">
-          <button class="btn btn-hire" onClick="window.location.href='rrb.html'">My project<s/button>
+          <button class="btn btn-hire" onClick="window.location.href='rrb.html'">My project</button>
           <button class="btn btn-contact">Contact Me</button>
         </div>
       </div>
